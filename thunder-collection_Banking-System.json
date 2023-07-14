@@ -1,0 +1,90 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Banking-System",
+    "dateExported": "2023-07-14T16:32:26.030Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "90df690e-315a-4dc1-9350-aec214e94169",
+            "name": "Customer",
+            "containerId": "",
+            "created": "2023-07-14T16:32:08.786Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "6a9a47be-e450-4ff3-a570-20f6c0632db9",
+            "name": "Transaction",
+            "containerId": "",
+            "created": "2023-07-14T16:32:19.920Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "55fb2439-c2eb-411b-a679-0b4bcf196e6b",
+            "colId": "483626f7-fc42-4442-b6dd-3e4b4b0aad25",
+            "containerId": "90df690e-315a-4dc1-9350-aec214e94169",
+            "name": "Create Customer",
+            "url": "http://localhost:5002/api/v1/customers/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-14T13:10:42.812Z",
+            "modified": "2023-07-14T16:31:52.971Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"User 1\",\n  \"email\": \"user1@mail.com\",\n  \"balance\": 100000\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6aaa0f8f-3fba-446f-b9b9-9ea85da2b969",
+            "colId": "483626f7-fc42-4442-b6dd-3e4b4b0aad25",
+            "containerId": "6a9a47be-e450-4ff3-a570-20f6c0632db9",
+            "name": "Create Transaction",
+            "url": "http://localhost:5002/api/v1/transactions/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-14T14:05:29.257Z",
+            "modified": "2023-07-14T14:15:01.886Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"sourceId\": \"64b1585a3a7388956c4c0142\",\n  \"destinationId\": \"64b1561ae7ddfe27c292e58a\",\n  \"amount\": 10000\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "84aa5be8-1efd-4fbc-b079-a5a09c464f29",
+            "colId": "483626f7-fc42-4442-b6dd-3e4b4b0aad25",
+            "containerId": "90df690e-315a-4dc1-9350-aec214e94169",
+            "name": "Get All Cutomers",
+            "url": "http://localhost:5002/api/v1/customers/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-14T13:26:51.958Z",
+            "modified": "2023-07-14T13:26:58.081Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a7a97d57-7b1a-40ec-be92-900e4a5efe21",
+            "colId": "483626f7-fc42-4442-b6dd-3e4b4b0aad25",
+            "containerId": "6a9a47be-e450-4ff3-a570-20f6c0632db9",
+            "name": "Get All Transactions",
+            "url": "http://localhost:5002/api/v1/transactions/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-14T16:30:42.009Z",
+            "modified": "2023-07-14T16:30:49.415Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
